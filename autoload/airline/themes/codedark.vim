@@ -47,9 +47,10 @@ let s:cdBlue = {'gui': '#0A7ACA', 'cterm': (g:codedark_term256 ? '32' : s:cterm0
 let s:cdLightBlue = {'gui': '#5CB6F8', 'cterm': (g:codedark_term256 ? '75' : s:cterm0C)}
 let s:cdYellow = {'gui': '#FFAF00', 'cterm': (g:codedark_term256 ? '214' : s:cterm0A)}
 let s:cdRed = {'gui': '#F44747', 'cterm': (g:codedark_term256 ? '203' : s:cterm08)}
+let s:cdPurple = {'gui': '#F44747', 'cterm': (g:codedark_term256 ? '092' : s:cterm08)}
 
 let s:cdDarkDarkDark = {'gui': '#262626', 'cterm': (g:codedark_term256 ? '235' : s:cterm01)}
-let s:cdDarkDark = {'gui': '#303030', 'cterm': (g:codedark_term256 ? '236' : s:cterm02)}
+let s:cdDarkDark = {'gui': '#303030', 'cterm': (g:codedark_term256 ? '239' : s:cterm02)}
 let s:cdDark = {'gui': '#3C3C3C', 'cterm': (g:codedark_term256 ? '237' : s:cterm03)}
 
 let s:Warning = [ s:cdRed.gui, s:cdDarkDark.gui, s:cdRed.cterm, s:cdDarkDark.cterm, 'none']
@@ -68,7 +69,7 @@ let g:airline#themes#codedark#palette.normal_modified.airline_warning = s:Warnin
 
 " Insert:
 
-let s:I1 = [ s:cdBack.gui, s:cdYellow.gui, s:cdBack.cterm, s:cdYellow.cterm, 'none' ]
+let s:I1 = [ s:cdFront.gui, s:cdPurple.gui, s:cdFront.cterm, s:cdPurple.cterm, 'none' ]
 let s:I2 = [ s:cdFront.gui, s:cdDarkDark.gui, s:cdFront.cterm, s:cdDarkDark.cterm, 'none' ]
 let s:I3 = [ s:cdFront.gui, s:cdDarkDarkDark.gui, s:cdFront.cterm, s:cdDarkDarkDark.cterm, 'none' ]
 let s:IM = [ s:cdFront.gui, s:cdDarkDarkDark.gui, s:cdFront.cterm, s:cdDarkDarkDark.cterm, 'none']
@@ -92,7 +93,7 @@ let g:airline#themes#codedark#palette.replace_modified.airline_warning = s:Warni
 
 " Visual:
 
-let s:V1 = [ s:cdLightBlue.gui, s:cdDark.gui, s:cdLightBlue.cterm, s:cdDark.cterm, 'none' ]
+let s:V1 = [ s:cdBack.gui, s:cdYellow.gui, s:cdBack.cterm, s:cdYellow.cterm, 'none' ]
 let s:V2 = [ s:cdFront.gui, s:cdDarkDark.gui, s:cdFront.cterm, s:cdDarkDark.cterm, 'none' ]
 let s:V3 = [ s:cdFront.gui, s:cdDarkDarkDark.gui, s:cdFront.cterm, s:cdDarkDarkDark.cterm, 'none' ]
 let s:VM = [ s:cdFront.gui, s:cdDarkDarkDark.gui, s:cdFront.cterm, s:cdDarkDarkDark.cterm, 'none']
