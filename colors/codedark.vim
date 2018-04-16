@@ -103,6 +103,7 @@ let s:cdSearch = {'gui': '#4C4E50', 'cterm': s:cterm0A, 'cterm256': '09'}
 let s:cdSpecial = {'gui': '#CE9178', 'cterm': s:cterm0F, 'cterm256': '141'}
 let s:cdVertSplit = {'gui': '#222222', 'cterm': s:cterm01, 'cterm256': '234'}
 let s:cdLineNumberBG = {'gui': '#5A5A5A', 'cterm': s:cterm04, 'cterm256': '237'}
+let s:cdSpellCap = {'gui': '#5A5A5A', 'cterm': s:cterm04, 'cterm256': '92'}
 
 " Syntax colors:
 
@@ -161,8 +162,8 @@ call <sid>hi('PmenuThumb', {}, s:cdPopupFront, 'none', {})
 call <sid>hi('Question', s:cdBlue, s:cdBack, 'none', {})
 call <sid>hi('Search', s:cdFront, s:cdSearch, 'none', {})
 call <sid>hi('SpecialKey', s:cdBlue, s:cdNone, 'none', {})
-call <sid>hi('SpellBad', s:cdNone, s:cdNone, 'undercurl', {})
-call <sid>hi('SpellCap', s:cdNone, s:cdNone, 'undercurl', {})
+call <sid>hi('SpellBad', s:cdNone, s:cdSearchCurrent, 'none', {})
+call <sid>hi('SpellCap', s:cdFront, s:cdSpellCap, 'none', {})
 call <sid>hi('SpellLocal', s:cdNone, s:cdNone, 'undercurl', {})
 call <sid>hi('StatusLine', s:cdFront, s:cdLeftMid, 'none', {})
 call <sid>hi('StatusLineNC', s:cdFront, s:cdLeftDark, 'none', {})
@@ -218,7 +219,7 @@ call <sid>hi("Conceal", s:cdFront, s:cdBack, 'none', {})
 
 call <sid>hi('Ignore', s:cdFront, {}, 'none', {})
 
-call <sid>hi('Error', s:cdRed, s:cdBack, 'undercurl', s:cdRed)
+call <sid>hi('Error', s:cdRed, s:cdLineNumberBG, 'none', {})
 
 call <sid>hi('Todo', s:cdNone, s:cdLeftMid, 'none', {})
 
